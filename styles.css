@@ -7,6 +7,34 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* Logo Styles */
+.w-10.h-10.rounded-full.bg-purple-600 {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.w-10.h-10.rounded-full.bg-purple-600::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.w-10.h-10.rounded-full.bg-purple-600:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+}
+
+.w-10.h-10.rounded-full.bg-purple-600:hover::after {
+    opacity: 1;
+}
+
 /* Navigation */
 .nav-link {
     color: #4B5563;
