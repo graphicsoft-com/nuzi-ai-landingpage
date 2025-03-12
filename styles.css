@@ -274,3 +274,37 @@ body {
 .hover-scale:hover {
     transform: scale(1.03);
 }
+
+/* Hero Microphone Icon */
+.hero-microphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    background-color: rgba(255, 196, 0, 0.95);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(255, 196, 0, 0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-microphone i {
+    font-size: 80px;
+    color: white;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
