@@ -1,0 +1,45 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run PHP Built-in Server",
+			"type": "php",
+			"request": "launch",
+			"runtimeExecutable": "C:\\bin\\php-7.4.33\\php.exe",
+			"runtimeArgs": [
+				"-dxdebug.mode=debug",
+				"-dxdebug.start_with_request=yes",
+				"-S",
+				"localhost:8006"
+			],
+			"program": "",
+			"cwd": "${workspaceRoot}",
+			"port": 9006
+		},
+		{
+			"type": "chrome",
+			"request": "launch",
+			"name": "Launch Chrome",
+			"url": "http://localhost:8006",
+			"webRoot": "${workspaceFolder}"
+		}
+	],
+	"compounds": [
+		{
+			"name": "Launch PHP Server + Chrome",
+			"configurations": [
+				"Run PHP Built-in Server",
+				"Launch Chrome"
+			],
+			"stopAll": true,
+			"presentation": {
+				"hidden": false,
+				"group": "",
+				"order": 1
+			}
+		}
+	]
+}
